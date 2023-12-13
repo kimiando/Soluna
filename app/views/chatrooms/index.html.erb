@@ -1,0 +1,7 @@
+<div class="card" style="width: 18rem;">
+  <% @chatrooms.each do |chatroom| %>
+    <div class="card-body">
+      <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
+    </div>
+  <% end %>
+</div>
