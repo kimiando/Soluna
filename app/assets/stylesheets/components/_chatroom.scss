@@ -28,3 +28,14 @@
     }
   }
 }
+.card{
+  display: grid;
+  /* justify-content: center; */
+  margin: 20px;
+}
+.chatroom-title {
+  display: grid;
+  justify-content: center;
+  a {text-decoration: none;
+  }
+}
