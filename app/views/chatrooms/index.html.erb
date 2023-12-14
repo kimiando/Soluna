@@ -1,12 +1,21 @@
-<%= link_to "Create a new chatroom", new_chatroom_path, class: "btn btn-primary" %>
-<div class="card" style="width: 18rem;">
+  <%= link_to "Create a new chatroom", new_chatroom_path, class: "btn btn-primary" %>
+<div class="cardlists">
   <% @chatrooms.each do |chatroom| %>
-    <div class="card-body">
-      <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
-      <%= link_to "Delete",
-    chatroom_path(chatroom),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
+    <div class="card-list">
+      <article class="card">
+        <div class="card-header">
+          <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
+          <button class="icon-button">
+            <%= link_to "Delete",
+              chatroom_path(chatroom),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+            %>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="Heart">
+              <path d="M7 3C4.239 3 2 5.216 2 7.95c0 2.207.875 7.445 9.488 12.74a.985.985 0 0 0 1.024 0C21.125 15.395 22 10.157 22 7.95 22 5.216 19.761 3 17 3s-5 3-5 3-2.239-3-5-3z" />
+            </svg>
+          </button>
+        </div>
+      </article>
     </div>
   <% end %>
 </div>
