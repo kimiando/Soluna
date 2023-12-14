@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :messages
   has_many :chatrooms
+  validates :nickname, presence: true, uniqueness: true
+  # validates :description, presence: true, uniqueness: true
 end
