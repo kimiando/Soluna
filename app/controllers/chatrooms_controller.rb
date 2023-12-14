@@ -1,5 +1,5 @@
 class ChatroomsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: %i[new create]
 
   def index
     @chatrooms = Chatroom.all
@@ -10,7 +10,6 @@ class ChatroomsController < ApplicationController
     @message = Message.new
     @messages = @chatroom.messages
   end
-
 
   def new
     @chatroom = Chatroom.new
@@ -32,7 +31,9 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.find(params[:id])
     @chatroom.messages.destroy_all
     @chatroom.destroy
+    redirect_to chatroom_path
   end
+
   private
 
   def chatroom_params
