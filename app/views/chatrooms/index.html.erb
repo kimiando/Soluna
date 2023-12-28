@@ -1,16 +1,19 @@
-  <%= link_to "Create a new chatroom", new_chatroom_path, class: "btn btn-primary" %>
+<%= link_to "Create a new chatroom", new_chatroom_path, class: "btn btn-primary" %>
 <div class="cardlists">
-  <% @chatrooms.each do |chatroom| %>
+  <% @chatrooms.each_with_index do |chatroom, index| %>
     <div class="card" style="width: 18rem;">
-      <%= link_to chatroom_path(chatroom), class:"delete-btn", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+      <%= link_to chatroom_path(chatroom), class: "delete-btn", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
         <i class="fa-solid fa-trash"></i>
       <% end %>
       <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
-      <%# <img src="..." class="card-img-top" alt="..."> %>
       <div class="card-body">
         <p>
           <i class="fa-regular fa-user"></i>
-          people in the chat
+          <% if @user_counts && @user_counts[index] %>
+            <%= @user_counts[index] %>
+          <% else %>
+            no active users available
+          <% end %>
         </p>
       </div>
     </div>
