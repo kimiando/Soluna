@@ -3,6 +3,7 @@ class ChatroomsController < ApplicationController
 
   def index
     @chatrooms = Chatroom.all
+    # @user_counts = @chatrooms.map(&:user_count)
   end
 
   def show
@@ -34,6 +35,9 @@ class ChatroomsController < ApplicationController
     redirect_to chatroom_path
   end
 
+  def user_count
+    users.count
+  end
   private
 
   def chatroom_params
