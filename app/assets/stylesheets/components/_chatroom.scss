@@ -41,7 +41,7 @@
 }
 
 body {
-	font-family: "Lexend", sans-serif;
+	// font-family: "Lexend", sans-serif;
 	line-height: 1.5;
 	// min-height: 100vh;
 	// display: flex;
@@ -164,7 +164,7 @@ img {
 	}
 }
 .cardlists {
-  display: grid;
+  display: flex;
   align-items: center;
   justify-items: center;
   flex-direction: row;
@@ -181,4 +181,20 @@ img {
   align-content: center;
   justify-content: center;
   margin-top: 20px;
+}
+.delete-btn{
+  display: flex;display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
+
+.chatroom-title{
+  display: flex;
+  justify-content: center;
+  a{
+  text-decoration: none;
+  color: #000;
+  }
 }
