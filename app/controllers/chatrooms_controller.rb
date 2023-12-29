@@ -32,7 +32,7 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.find(params[:id])
     @chatroom.messages.destroy_all
     @chatroom.destroy
-    redirect_to chatroom_path
+    redirect_to chatrooms_path
   end
 
   def user_count
@@ -41,6 +41,6 @@ class ChatroomsController < ApplicationController
   private
 
   def chatroom_params
-    params.require(:chatroom).permit(:name)
+    params.require(:chatroom).permit(:name, :photo)
   end
 end

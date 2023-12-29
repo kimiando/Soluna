@@ -5,6 +5,7 @@
       <div class="mb-3">
         <%= simple_form_for [@chatroom] do |f| %>
           <label for="exampleInputEmail1" class="form-label"><%= f.input :name, label_html: { class: "form-label" }   %></label>
+          <%= f.input :photo, as: :file %>
         </div>
         <%= f.submit class: 'create_btn btn-primary' %>
       <% end %>
