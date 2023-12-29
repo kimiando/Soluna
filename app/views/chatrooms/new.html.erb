@@ -1,13 +1,12 @@
 <div class="vh-100 d-flex justify-content-center align-items-center">
   <div class="col-md-4 p-5 shadow-sm border rounded-5 border-primary">
-    <h2 class="text-center mb-4 text-primary ">Create a new Chatroom</h2>
-    <form>
+    <h2 class="text-center mb-4 text-primary">Create a new Chatroom</h2>
+    <%= simple_form_for @chatroom do |f| %>
       <div class="mb-3">
-        <%= simple_form_for [@chatroom] do |f| %>
-          <label for="exampleInputEmail1" class="form-label"><%= f.input :name, label_html: { class: "form-label" }   %></label>
-          <%= f.input :photo, as: :file %>
-        </div>
-        <%= f.submit class: 'create_btn btn-primary' %>
-      <% end %>
-    </div>
+        <%= f.input :name, label_html: { class: "form-label" } %>
+        <%= f.input :photo, as: :file %>
+      </div>
+      <%= f.button :submit, 'Create Chatroom', class: 'create_btn btn-primary' %>
+    <% end %>
   </div>
+</div>

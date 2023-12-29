@@ -24,6 +24,7 @@ class ChatroomsController < ApplicationController
       flash[:notice] = "Chatroom was successfully created."
       redirect_to @chatroom
     else
+      puts @chatroom.errors.full_messages
       render :new
     end
   end
@@ -38,6 +39,7 @@ class ChatroomsController < ApplicationController
   def user_count
     users.count
   end
+
   private
 
   def chatroom_params
