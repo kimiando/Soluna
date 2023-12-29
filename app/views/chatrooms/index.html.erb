@@ -5,8 +5,8 @@
       <%= link_to chatroom_path(chatroom), class: "delete-btn", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
         <i class="fa-solid fa-trash"></i>
       <% end %>
-      <% if chatroom.photo.present? %>
-        <%= cl_image_tag chatroom.photo.key, height: 300, width: 400, crop: :fill %>
+      <% if chatroom.photo.attached? %>
+        <%= cl_image_tag chatroom.photo.key, height: 150, width: 150, crop: :fill %>
       <% else %>
         <%= image_tag 'chats.png', height: 150, width: 150, alt: 'Placeholder Image' %>
       <% end %>
