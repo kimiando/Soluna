@@ -5,11 +5,13 @@
       <%= link_to chatroom_path(chatroom), class: "delete-btn", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
         <i class="fa-solid fa-trash"></i>
       <% end %>
-      <% if chatroom.photo.attached? %>
-        <%= cl_image_tag chatroom.photo.key, height: 150, width: 150, crop: :fill %>
-      <% else %>
-        <%= image_tag 'chats.png', height: 150, width: 150, alt: 'Placeholder Image' %>
-      <% end %>
+      <div class="pics">
+        <% if chatroom.photo.attached? %>
+          <%= cl_image_tag chatroom.photo.key,class:"chatrooms-pic"%>
+        <% else %>
+          <%= image_tag 'chats.png', height: 150, width: 150, alt: 'Placeholder Image' %>
+        <% end %>
+      </div>
       <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
       <div class="card-body">
         <p>

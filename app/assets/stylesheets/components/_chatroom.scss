@@ -69,10 +69,10 @@ img {
 	position: relative;
 	transition: .15s ease-in;
 
-	&:hover, &:focus-within {
-		box-shadow: 0 0 0 2px #000000, 0 10px 60px 0 rgba(#000, .1);
-			transform: translatey(-5px);
-	}
+	// &:hover, &:focus-within {
+	// 	box-shadow: 0 0 0 2px #000000, 0 10px 60px 0 rgba(#000, .1);
+	// 		transform: translatey(-5px);
+	// }
 }
 
 .card-image {
@@ -197,4 +197,14 @@ img {
   text-decoration: none;
   color: #000;
   }
+}
+.chatrooms-pic{
+  height: 150px;
+  width: 150px;
+}
+.pics{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
 }
