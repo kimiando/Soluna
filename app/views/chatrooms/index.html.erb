@@ -1,28 +1,30 @@
-<%= link_to "Create a new chatroom", new_chatroom_path, class: "btn btn-primary" %>
-<div class="cardlists">
-  <% @chatrooms.each_with_index do |chatroom, index| %>
-    <div class="card" style="width: 18rem;">
-      <%= link_to chatroom_path(chatroom), class: "delete-btn", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
-        <i class="fa-solid fa-trash"></i>
-      <% end %>
-      <div class="pics">
-        <% if chatroom.photo.attached? %>
-          <%= cl_image_tag chatroom.photo.key,class:"chatrooms-pic"%>
-        <% else %>
-          <%= image_tag 'chats.png', height: 150, width: 150, alt: 'Placeholder Image' %>
+<div class="chatrooms">
+  <%= link_to "Create a new chatroom", new_chatroom_path, class: "chatrooms-add-btn" %>
+  <div class="cardlists">
+    <% @chatrooms.each_with_index do |chatroom, index| %>
+      <div class="card" style="width: 18rem;">
+        <%= link_to chatroom_path(chatroom), class: "delete-btn", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+          <i class="fa-solid fa-trash"></i>
         <% end %>
-      </div>
-      <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
-      <div class="card-body">
-        <p>
-          <i class="fa-regular fa-user"></i>
-          <% if @user_counts && @user_counts[index] %>
-            <%= @user_counts[index] %>
+        <div class="pics">
+          <% if chatroom.photo.attached? %>
+            <%= cl_image_tag chatroom.photo.key,class:"chatrooms-pic"%>
           <% else %>
-            no active users available
+            <%= image_tag 'chats.png', height: 150, width: 150, alt: 'Placeholder Image' %>
           <% end %>
-        </p>
+        </div>
+        <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
+        <div class="card-body">
+          <p>
+            <i class="fa-regular fa-user"></i>
+            <% if @user_counts && @user_counts[index] %>
+              <%= @user_counts[index] %>
+            <% else %>
+              no active users available
+            <% end %>
+          </p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
