@@ -1,1 +1,8 @@
+<% @users.each do |user| %>
+  <%= user.first_name %>
+  <%= user.last_name %>
+  <%= user.nickname %>
+  <%= user.bio %>
+<% end %>
 <%= @users.inspect %>
+<%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
