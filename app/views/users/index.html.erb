@@ -1,9 +1,9 @@
 <div class="profile-container">
   <% @users.each do |user| %>
-    <%= user.first_name %>
-    <%= user.last_name %>
-    <%= user.nickname %>
-    <%= user.bio %>
+    <div class="card">
+      <img src="img.jpg" alt="user-photo not found" style="width:100%">
+      <h1><%= user.first_name %> <%= user.last_name %></h1>
+      <h5><%= user.nickname %></h5>
+    </div>
   <% end %>
-  <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
 </div>
