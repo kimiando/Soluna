@@ -1,0 +1,9 @@
+<div class="profile-container">
+  <h1>
+    <%= @user.first_name %>
+  </h1>
+  <%= @user.last_name %>
+  <%= @user.nickname %>
+  <%= @user.bio %>
+  <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
+</div>
