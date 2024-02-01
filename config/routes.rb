@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :chatrooms do
     resources :messages, only: %i[create new destroy]
   end
+  get '/games', to: 'games#index'
   # Defines the root path route ("/")
   # root "chatrooms#show"
 end
