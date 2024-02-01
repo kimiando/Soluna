@@ -1,7 +1,13 @@
 <div class="profile-container">
   <% @users.each do |user| %>
     <div class="card">
-      <img src="img.jpg" alt="user-photo not found" style="width:100%">
+      <div class="pics">
+        <% if user.photo.attached? %>
+          <%= cl_image_tag user.photo.key,class:"chatrooms-pic"%>
+        <% else %>
+          <%= image_tag 'chats.png', height: 200, width: 200, alt: 'Placeholder Image' %>
+        <% end %>
+      </div>
       <h1><%= user.first_name %> <%= user.last_name %></h1>
       <h5><%= user.nickname %></h5>
     </div>
