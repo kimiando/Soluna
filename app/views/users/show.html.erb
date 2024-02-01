@@ -1,4 +1,9 @@
 <div class="profile-container">
+  <% if @user.photo.attached? %>
+    <%= cl_image_tag @user.photo.key,class:"chatrooms-pic"%>
+  <% else %>
+    <%= image_tag 'chats.png', height: 200, width: 200, alt: 'Placeholder Image' %>
+  <% end %>
   <h1>
     <%= @user.first_name %>
   </h1>
