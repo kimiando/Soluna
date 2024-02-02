@@ -2,11 +2,21 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  justify-content: center;
   align-items: center;
-  margin: 40px;
+  margin: 50px;
   padding: 20px;
   background-color: beige;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.user-container{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  padding: 20px;
+  background-color: beige;
+  align-items: center;
 }
 
 .card {
