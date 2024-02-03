@@ -1,14 +1,15 @@
-<div class="user-container">
-  <% if @user.photo.attached? %>
-    <%= cl_image_tag @user.photo.key,class:"chatrooms-pic"%>
-  <% else %>
-    <%= image_tag 'chats.png', height: 200, width: 200, alt: 'Placeholder Image' %>
-  <% end %>
-  <h1>
-    <%= @user.first_name %>
-  </h1>
-  <%= @user.last_name %>
-  <%= @user.nickname %>
-  <%= @user.bio %>
-  <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
+<div class="my-card">
+  <div class="pics">
+    <% if @user.photo.attached? %>
+      <%= cl_image_tag @user.photo.key,class:"chatrooms-pic"%>
+    <% else %>
+      <%= image_tag 'profile-pic.webp', height: 200, width: 200, alt: 'Placeholder Image' %>
+    <% end %>
+  </div>
+  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  <h5><%= @user.nickname %></h5>
+  <p class="bio"><%= @user.bio %></p>
+  <div class="users-button">
+    <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
+  </div>
 </div>
