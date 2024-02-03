@@ -6,6 +6,7 @@ GIT
       actionpack (>= 5.2)
       activemodel (>= 5.2)
 
+
 GEM
   remote: https://rubygems.org/
   specs:

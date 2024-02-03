@@ -6,7 +6,9 @@
         <%= f.input :name, label_html: { class: "form-label" } %>
         <%= f.input :photo, as: :file %>
       </div>
-      <%= f.button :submit, 'Create Chatroom', class: 'create_btn btn-primary' %>
+      <div class="chatroom-button">
+        <%= f.button :submit, 'Create Chatroom', class: 'create_btn btn-primary' %>
+      </div>
     <% end %>
   </div>
 </div>

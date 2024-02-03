@@ -10,6 +10,7 @@ AllCops:
     - 'tmp/**/*'
     - 'test/**/*'
 
+
 Style/ConditionalAssignment:
   Enabled: false
 Style/StringLiterals:

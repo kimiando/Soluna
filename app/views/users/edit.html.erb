@@ -6,7 +6,9 @@
       <%= f.input :user_name, input_html: { class: "user-form" } %>
       <%= f.input :bio, input_html: { class: "user-form" } %>
       <%= f.input :photo, as: :file %>
-      <%= f.button :submit, class: "btn btn-primary" %>
+      <div class="chatroom-button">
+        <%= f.button :submit, class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 </div>
