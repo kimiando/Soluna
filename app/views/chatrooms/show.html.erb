@@ -7,11 +7,11 @@
     <% end %>
     #<%= @chatroom.name %>
   </h1>
-  <div class="message-container">
-    <h3>Welcome to <%= @chatroom.name %></h3>
-    <p>--this is the start of your converstation--</p>
-  </div>
   <div class="messages" data-chatroom-subscription-target="messages">
+    <div class="message-container">
+      <h3>Welcome to <%= @chatroom.name %></h3>
+      <p>--this is the start of your converstation--</p>
+    </div>
     <% @chatroom.messages.each do |message| %>
       <%= render "messages/message", message: message %>
     <% end %>

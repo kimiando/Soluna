@@ -13,3 +13,67 @@
   width: 50px;
   height: 50px;
 }
+
+.submit-button{
+  color: white;
+  background-color: #DAC0A2;
+  border: none;
+}
+.submit-button:hover{
+  color: white;
+  background-color: #dac0a29c;
+  border: none;
+}
+
+// messages-css text
+.message-container{
+  // border-bottom: 1px solid $gray-200;
+  margin-bottom: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p{
+
+    color: dimgray;
+  }
+}
+.title{
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: -40px;
+  background-color: #102C59;
+  color:white;
+  width: -24px;
+  border-radius: 6px;
+  justify-content: center;
+  padding: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.house-rules{
+  display: grid;
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr ;
+    padding: 40px;
+    grid-gap: 30px;
+    .card{
+      margin-bottom: 10px;
+      align-content: center;
+      margin-top: 20px;
+      line-height: 30px;
+      border: 1px solid #102C59;
+      h5{
+        color: #102C59;
+      }
+      p{
+        text-align: justify;
+        padding: 20px;
+        color: #907d65;
+      }
+    }
+}
