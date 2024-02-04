@@ -1,6 +1,6 @@
 <div class="profile-container">
   <% @users.each do |user| %>
-    <div class="card">
+    <div class="all-users-card">
       <div class="user-pics">
         <% if user.photo.attached? %>
           <%= cl_image_tag user.photo.key, class: "user-pics" %>

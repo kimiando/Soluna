@@ -30,31 +30,19 @@
 }
 .card{
   display: grid;
-  /* justify-content: center; */
   margin: 20px;
 }
-
-// @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap');
 
 *, *:after, *:before {
 	box-sizing: border-box;
 }
 
 body {
-	// font-family: "Lexend", sans-serif;
 	line-height: 1.5;
-	// min-height: 100vh;
-	// display: flex;
 	align-items: center;
 	justify-content: center;
 	color: #393232;
 }
-
-// .pics {
-// 	max-width: 100%;
-// 	display: block;
-//   border-radius: 100px;
-// }
 
 .card-list {
 	width: 100%;
@@ -69,11 +57,6 @@ body {
 	padding: 1.25rem;
 	position: relative;
 	transition: .15s ease-in;
-
-	// &:hover, &:focus-within {
-	// 	box-shadow: 0 0 0 2px #000000, 0 10px 60px 0 rgba(#000, .1);
-	// 		transform: translatey(-5px);
-	// }
 }
 
 .card-image {
@@ -103,67 +86,8 @@ body {
 			bottom: 0;
 		}
 	}
-
-
 }
 
-.icon-button {
-	border: 0;
-	background-color: #fff;
-	border-radius: 50%;
-	width: 2.5rem;
-	height: 2.5rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-shrink: 0;
-	font-size: 1.25rem;
-	transition: .25s ease;
-	box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .15);
-	z-index: 1;
-	cursor: pointer;
-	color: #565656;
-
-	svg {
-		width: 1em;
-		height: 1em;
-	}
-	&:hover, &:focus {
-		background-color: #EC4646;
-		color: #FFF;
-	}
-}
-
-.card-footer {
-	margin-top: 1.25rem;
-	border-top: 1px solid #ddd;
-	padding-top: 1.25rem;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-.card-meta {
-	display: flex;
-	align-items: center;
-	color: #787878;
-	&:first-child:after {
-		display: block;
-		content: "";
-		width: 4px;
-		height: 4px;
-		border-radius: 50%;
-		background-color: currentcolor;
-		margin-left: .75rem;
-		margin-right: .75rem;
-	}
-	svg {
-		flex-shrink: 0;
-		width: 1em;
-		height: 1em;
-		margin-right: .25em;
-	}
-}
 .cardlists {
   display: flex;
   align-items: center;
@@ -173,6 +97,7 @@ body {
   align-content: center;
   justify-content: center;
 }
+
 .buttonadd {
   display: grid;
   align-items: center;
@@ -183,8 +108,10 @@ body {
   justify-content: center;
   margin-top: 20px;
 }
+
 .delete-btn{
-  display: flex;display: flex;
+  display: flex;
+  display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
   align-content: flex-end;
