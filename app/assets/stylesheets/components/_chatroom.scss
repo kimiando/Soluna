@@ -8,7 +8,7 @@
   flex-grow: 1;
 
   h1 {
-    border-bottom: 1px solid $gray-200;
+    border-bottom: 1px solid #DAC0A2;
     margin-bottom: 0;
     padding: 1rem;
   }
@@ -20,7 +20,7 @@
   }
 
   #new_message {
-    border-top: 1px solid $gray-200;
+    border-top: 1px solid #DAC0A2;
     padding: 1rem;
 
     .form-group {
@@ -28,6 +28,17 @@
     }
   }
 }
+
+.message-container{
+    // border-bottom: 1px solid $gray-200;
+    margin-bottom: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 .card{
   display: grid;
   margin: 20px;
@@ -143,4 +154,16 @@ body {
   display: flex;
     justify-content: center;
     margin-top: 30px;
+    color: #DAC0A2;
+}
+
+.submit-button{
+  color: white;
+  background-color: #DAC0A2;
+  border: none;
+}
+.submit-button:hover{
+  color: white;
+  background-color: #dac0a29c;
+  border: none;
 }

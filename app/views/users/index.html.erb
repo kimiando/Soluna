@@ -5,7 +5,7 @@
         <% if user.photo.attached? %>
           <%= cl_image_tag user.photo.key, class: "user-pics" %>
         <% else %>
-          <%= image_tag 'profile-pic.webp', height: 200, width: 200, alt: 'Placeholder Image' %>
+          <%= image_tag 'profile-pic.webp',class: "user-pics", height: 200, width: 200, alt: 'Placeholder Image' %>
         <% end %>
       </div>
       <p class="user-name">@<%= user.user_name %></p>
