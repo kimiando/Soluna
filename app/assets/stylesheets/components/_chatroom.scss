@@ -50,11 +50,11 @@ body {
 	color: #393232;
 }
 
-img {
-	max-width: 100%;
-	display: block;
-  border-radius: 100px;
-}
+// .pics {
+// 	max-width: 100%;
+// 	display: block;
+//   border-radius: 100px;
+// }
 
 .card-list {
 	width: 100%;
@@ -203,6 +203,7 @@ img {
 .chatrooms-pic{
   height: 200px;
   width: 200px;
+  border-radius: 100px;
 }
 .pics{
   display: flex;

@@ -19,6 +19,11 @@
   background-color: antiquewhite;
   height: 100%;
   margin: 10px;
+  display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-image {
@@ -62,6 +67,10 @@ button:hover, a:hover {
   margin: auto;
   margin-top: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .bio {
@@ -79,4 +88,10 @@ button:hover, a:hover {
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+}
+
+.user-pics{
+  width: 200px;
+  height: 200px;
+
 }

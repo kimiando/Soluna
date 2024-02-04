@@ -37,7 +37,7 @@ class ChatroomsController < ApplicationController
   end
 
   def user_count
-    users.count
+    @users.count
   end
 
   private
