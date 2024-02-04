@@ -9,6 +9,7 @@
   h1{
     text-align: center;
     color: #0E2C58;
+    margin-bottom: 2rem;
   }
 }
 
@@ -16,10 +17,10 @@
 .landing-text {
   flex: 1;
   text-align: justify;
-  margin: 70px
-p{
-  color: orange;
-}
+  margin: 70px;
+  margin-left: 70px;
+  margin-right: 62px;
+  line-height: 40px;
 }
 
 .landing-banner {
@@ -35,11 +36,14 @@ p{
     text-align: center;
     padding: 33px;
     display: flex;
-
+    h1{
+      margin-bottom: 2rem;
+    }
   }
   .landing-text {
+    margin:0;
     p{
-      margin-bottom: 4rem;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -52,8 +56,10 @@ p{
 
   }
   .landing-text {
+    margin:0;
+    line-height: normal;
     p{
-      margin-bottom: 4rem;
+      margin-bottom: 1rem;
     }
   }
 }

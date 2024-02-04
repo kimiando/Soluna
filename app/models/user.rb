@@ -9,5 +9,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true, uniqueness: true
   validates :last_name, presence: true, uniqueness: true
   validates :nickname, presence: true, uniqueness: true
-  # validates :description, presence: true, uniqueness: true
+  validates :bio, presence: true
+
+  enum status: { online: 'online', away: 'away', offline: 'offline' }
 end

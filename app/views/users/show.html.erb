@@ -8,6 +8,12 @@
   </div>
   <h1><%= @user.first_name %> <%= @user.last_name %></h1>
   <h5><%= @user.nickname %></h5>
+  <p>
+    <%= @user.user_name %>
+    <span class="<%= @user.online? ? 'online' : 'offline' %>">
+      <%= @user.status.capitalize %>
+    </span>
+  </p>
   <p class="bio"><%= @user.bio %></p>
   <div class="users-button">
     <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
