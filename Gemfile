@@ -56,6 +56,11 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "dotenv-rails"
 gem "cloudinary"
+gem 'rspec-rails'
+
+group :test do
+  gem 'factory_bot_rails'
+end
 
 group :development, :test do
   gem "dotenv-rails"
