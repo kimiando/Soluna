@@ -9,9 +9,11 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'navbar' %>
     <link rel="preload" as="style" href="<%= asset_path('application.css') %>">
   </head>
-  <body><%= render "shared/navbar" %>
+  <body>
+    <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
     <%= yield %>
   </body>

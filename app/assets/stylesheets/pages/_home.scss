@@ -1,1 +1,59 @@
 // Specific CSS for your home-page
+.landing-container {
+  display: flex;
+  align-items: center;
+  background-color: #FCF1E4;
+  border-radius: 40px;
+  margin: 25px;
+  padding:25px;
+  h1{
+    text-align: center;
+    color: #0E2C58;
+  }
+}
+
+/* banner-pic css */
+.landing-text {
+  flex: 1;
+  text-align: justify;
+  margin: 70px
+p{
+  color: orange;
+}
+}
+
+.landing-banner {
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 33px;
+    display: flex;
+
+  }
+  .landing-text {
+    p{
+      margin-bottom: 4rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 33px;
+    display: flex;
+
+  }
+  .landing-text {
+    p{
+      margin-bottom: 4rem;
+    }
+  }
+}
