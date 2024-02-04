@@ -6,9 +6,9 @@ class User < ApplicationRecord
   has_many :messages
   has_many :chatrooms
   has_one_attached :photo
-  validates :first_name, presence: true, uniqueness: true
-  validates :last_name, presence: true, uniqueness: true
-  validates :nickname, presence: true, uniqueness: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :nickname, presence: true
   validates :bio, presence: true
 
   enum status: { online: 'online', away: 'away', offline: 'offline' }

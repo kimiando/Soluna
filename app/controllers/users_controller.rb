@@ -2,15 +2,14 @@ class UsersController < ApplicationController
   def index
     @users = User.all
   end
-
   def show
     @user = User.find(params[:id])
-    @user.update(status: 'online')
+    @user.update_column(:status, 'online')
   end
 
   def edit
     @user = User.find(params[:id])
-    @user.update(status: 'online')
+    @user.update_column(:status, 'online')
   end
 
   def update
