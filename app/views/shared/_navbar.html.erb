@@ -1,4 +1,4 @@
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav", style="width:300px">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a class="navbar-brand" href="<%= root_path %>">
     <%= image_tag "chats.png", class:"navbar-pic" %>
@@ -11,6 +11,15 @@
       <div class="dropdown-content" aria-labelledby="userDropdown">
         <%= link_to new_chatroom_path, class: "dropdown-item" do %>
           <i class="fa-solid fa-plus"></i> Chatroom
+        <% end %>
+        <% if @chatrooms.present? %>
+          <% @chatrooms.each do |chatroom| %>
+            <%= link_to chatroom_path(chatroom), class: "dropdown-item" do %>
+              <%= chatroom.name %>
+            <% end %>
+          <% end %>
+        <% else %>
+          <%= link_to "Go to Chatrooms", chatrooms_path %>
         <% end %>
       </div>
     </div>
@@ -28,4 +37,4 @@
     <%= link_to "Log-in", user_session_path, method: :post, data: { turbo_frame: 'main' } %>
   <% end %>
 </div>
-<span style="font-size:30px;cursor:pointer;color:#0F2C59;" onclick="openNav()">&#9776; Soluna</span>
+<span style="font-size:35px;cursor:pointer;color:#0F2C59;" onclick="openNav()">&#9776; Soluna</span>

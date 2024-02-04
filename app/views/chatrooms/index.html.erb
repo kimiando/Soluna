@@ -3,7 +3,7 @@
     <% @chatrooms.each_with_index do |chatroom, index| %>
       <div class="card" style="width: 22rem;">
         <%= link_to chatroom_path(chatroom), class: "delete-btn", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-trash" style="color: black;"></i>
         <% end %>
         <div class="pics">
           <% if chatroom.photo.attached? %>

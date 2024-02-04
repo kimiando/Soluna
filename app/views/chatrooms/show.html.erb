@@ -1,5 +1,16 @@
 <div class="container chatroom" data-controller="chatroom-subscription"  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
-  <h1>#<%= @chatroom.name %></h1>
+  <h1>
+    <% if @chatroom.photo.attached? %>
+      <%= cl_image_tag @chatroom.photo.key,class:"chatroom-show-pic"%>
+    <% else %>
+      <%= image_tag 'chats.png', height: 50, width: 50, alt: 'Placeholder Image' %>
+    <% end %>
+    #<%= @chatroom.name %>
+  </h1>
+  <div class="message-container">
+    <h3>Welcome to <%= @chatroom.name %></h3>
+    <p>--this is the start of your converstation--</p>
+  </div>
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
       <%= render "messages/message", message: message %>
@@ -13,6 +24,6 @@
     placeholder: "Message ##{@chatroom.name}",
     wrapper_html: {class: "flex-grow-1"}
   %>
-    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+    <%= f.submit "Send", class: "btn btn-primary mb-3 submit-button" %>
   <% end %>
 </div>
