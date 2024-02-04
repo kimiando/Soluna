@@ -36,7 +36,7 @@
   margin-left: 50px;
 }
 .dropdown-container {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 0px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #DAC0A3;
@@ -53,8 +53,9 @@
   display: none;
   padding-left: 8px;
 }
-
-
+.chatrooms-nav{
+  margin-left: -31px;
+}
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;

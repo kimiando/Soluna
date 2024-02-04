@@ -1,7 +1,4 @@
 <div class="chatrooms">
-  <div class="button">
-    <%= link_to "Create a new chatroom", new_chatroom_path, class: "chatrooms-add-btn" %>
-  </div>
   <div class="cardlists">
     <% @chatrooms.each_with_index do |chatroom, index| %>
       <div class="card" style="width: 22rem;">

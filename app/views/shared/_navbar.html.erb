@@ -4,20 +4,28 @@
     <%= image_tag "chats.png", class:"navbar-pic" %>
   </a>
   <% if user_signed_in? %>
-    <a class="nav-link" href="<%= chatrooms_path %>">Chatrooms</a>
+    <div class="dropdown-container">
+      <a class="chatrooms-nav" href="<%= chatrooms_path %>">
+        Chatrooms <i class="fa fa-caret-down"></i>
+      </a>
+      <div class="dropdown-content" aria-labelledby="userDropdown">
+        <%= link_to new_chatroom_path, class: "dropdown-item" do %>
+          <i class="fa-solid fa-plus"></i> Chatroom
+        <% end %>
+      </div>
+    </div>
     <a class="nav-link" href="<%= games_path %>">Games</a>
     <div class="dropdown-container">
       <%= current_user.nickname %>
       <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content" aria-labelledby="userDropdown">
-      <%= link_to "My Profile", user_path(current_user), class: "dropdown-item", data: { turbo_frame: 'main' } %>
-      <%= link_to "Other Users", users_path, class: "dropdown-item", data: { turbo_frame: 'main' } %>
-      <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete, turbo_frame: 'main' }, class: "dropdown-item" %>
+      <div class="dropdown-content" aria-labelledby="userDropdown">
+        <%= link_to "My Profile", user_path(current_user), class: "dropdown-item", data: { turbo_frame: 'main' } %>
+        <%= link_to "Other Users", users_path, class: "dropdown-item", data: { turbo_frame: 'main' } %>
+        <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete, turbo_frame: 'main' }, class: "dropdown-item" %>
+      </div>
     </div>
-  </div>
-<% else %>
-  <%= link_to "Log-in", user_session_path, method: :post, data: { turbo_frame: 'main' } %>
-<% end %>
+  <% else %>
+    <%= link_to "Log-in", user_session_path, method: :post, data: { turbo_frame: 'main' } %>
+  <% end %>
 </div>
 <span style="font-size:30px;cursor:pointer;color:#0F2C59;" onclick="openNav()">&#9776; Soluna</span>
