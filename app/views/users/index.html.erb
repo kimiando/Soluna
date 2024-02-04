@@ -1,15 +1,19 @@
 <div class="profile-container">
   <% @users.each do |user| %>
     <div class="card">
-      <div class="pics">
+      <div class="user-pics">
         <% if user.photo.attached? %>
-          <%= cl_image_tag user.photo.key,class:"chatrooms-pic"%>
+          <%= cl_image_tag user.photo.key, class: "user-pics" %>
         <% else %>
           <%= image_tag 'profile-pic.webp', height: 200, width: 200, alt: 'Placeholder Image' %>
         <% end %>
       </div>
       <h1><%= user.first_name %> <%= user.last_name %></h1>
-      <h5><%= user.nickname %></h5>
+      <p>@<%= user.user_name %></p>
+      <p>
+        <i class="fa-solid fa-circle" style="<%= user.online? ? 'color: #20b689;' : 'color: gray;' %>"></i>
+        <%= user.status.present? ? user.status.capitalize : 'Offline' %>
+      </p>
     </div>
   <% end %>
 </div>
