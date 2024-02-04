@@ -57,6 +57,7 @@ gem "sassc-rails"
 gem "dotenv-rails"
 gem "cloudinary"
 gem 'rspec-rails'
+gem 'redis'
 
 group :test do
   gem 'factory_bot_rails'
