@@ -3,26 +3,18 @@
     <% @chatrooms.each_with_index do |chatroom, index| %>
       <div class="card" style="width: 22rem;">
         <%= link_to chatroom_path(chatroom), class: "delete-btn", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
-          <i class="fa-solid fa-trash" style="color: black;"></i>
+          <i class="fa-solid fa-trash" style="color:beige"></i>
         <% end %>
-        <div class="pics">
-          <% if chatroom.photo.attached? %>
-            <%= cl_image_tag chatroom.photo.key,class:"chatrooms-pic"%>
-          <% else %>
-            <%= image_tag 'chats.png', height: 200, width: 200, alt: 'Placeholder Image' %>
-          <% end %>
-        </div>
-        <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
-        <div class="card-body">
-          <p>
-            <i class="fa-regular fa-user"></i>
-            <% if @user_counts && @user_counts[index] %>
-              <%= @user_counts[index] %>
+        <%= link_to chatroom_path(chatroom) do %>
+          <div class="pics">
+            <% if chatroom.photo.attached? %>
+              <%= cl_image_tag chatroom.photo.key,class:"chatrooms-pic"%>
             <% else %>
-              no active users available
+              <%= image_tag 'chats.png', height: 200, width: 200, alt: 'Placeholder Image' %>
             <% end %>
-          </p>
-        </div>
+          </div>
+        <% end %>
+        <h5 class="chatroom-title"><%= link_to chatroom.name, chatroom_path(chatroom) %></h5>
       </div>
     <% end %>
   </div>
