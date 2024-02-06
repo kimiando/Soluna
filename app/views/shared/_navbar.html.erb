@@ -1,7 +1,7 @@
-<div id="mySidenav" class="sidenav", style="width:300px">
+<div id="mySidenav" class="sidenav", style="width:250px">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a class="navbar-brand" href="<%= root_path %>">
-    <%= image_tag "chats.png", class:"navbar-pic" %>
+    <%= image_tag "soluna.png", class:"navbar-pic" %>
   </a>
   <% if user_signed_in? %>
     <div class="dropdown-container">
@@ -37,4 +37,4 @@
     <%= link_to "Log-in", user_session_path, method: :post, data: { turbo_frame: 'main' } %>
   <% end %>
 </div>
-<span style="font-size:35px;cursor:pointer;color:#0F2C59;" onclick="openNav()">&#9776; Soluna</span>
+<span style="font-size:30px;cursor:pointer;color:#0F2C59;" onclick="openNav()">&#9776; Soluna</span>

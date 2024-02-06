@@ -17,8 +17,7 @@ class ChatroomsController < ApplicationController
   end
 
   def create
-    # @chatroom = current_user.chatrooms.build(chatroom_params)
-    @chatroom = Chatroom.new(chatroom_params)
+    @chatroom = current_user.chatrooms.build(chatroom_params)
     @message = Message.new
 
     if @chatroom.save
