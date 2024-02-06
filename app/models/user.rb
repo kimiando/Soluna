@@ -10,9 +10,13 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :nickname, presence: true
   validates :email, presence: true
-  validates :password, presence: true, length: { minimum: 6 }
   validates :user_name, presence: true
   validates :bio, presence: true
+  validates :password, presence: true, length: { minimum: 6 }, if: :password_required?
 
   enum status: { online: 'online', away: 'away', offline: 'offline' }
+
+  def password_required?
+    new_record? || password.present? || password_confirmation.present?
+  end
 end

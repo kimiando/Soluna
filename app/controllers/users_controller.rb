@@ -5,12 +5,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user.update_column(:status, 'online')
+    @user.update(status: 'online')
   end
 
   def edit
     @user = User.find(params[:id])
-    @user.update_column(:status, 'online')
+    @user.update(status: 'online')
   end
 
   def update
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user), notice: 'User was successfully updated.'
     else
+      flash[:alert] = @user.errors.full_messages.join(', ')
       render :edit
     end
   end
@@ -25,6 +26,10 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :user_name, :nickname, :bio, :photo)
+    if params[:user][:password].present? || params[:user][:password_confirmation].present?
+      params.require(:user).permit(:first_name, :last_name, :user_name, :nickname, :bio, :photo, :password, :password_confirmation)
+    else
+      params.require(:user).permit(:first_name, :last_name, :user_name, :nickname, :bio, :photo)
+    end
   end
 end
