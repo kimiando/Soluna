@@ -31,6 +31,70 @@
 }
 
 
+@media screen and (max-width: 500px) {
+  .chatroom{
+    background:  #F8F0E5;
+    margin-top: 28px;
+    height: calc(80vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  h1 {
+    border-bottom: 1px solid #DAC0A2;
+    margin-bottom: 0;
+    padding: 1rem;
+    font-family: 'Merriweather', serif;
+  }
+
+  .messages {
+    height: 100%;
+    overflow: scroll;
+    padding: 1rem;
+  }
+
+  #new_message {
+    border-top: 1px solid #DAC0A2;
+    padding: 1rem;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+  .message-container{
+    margin-right: 12px;
+    p{
+      color: dimgray;
+      font-size: 13px;
+    }
+  }
+}
+@media screen and (max-width: 577px){
+.container-sm, .container {
+  max-width: 415px;
+}
+}
+@media screen and (max-width: 420px){
+.container-sm, .container {
+  max-width: 364px;
+}
+}
+// messages-css text
+.message-container{
+  // border-bottom: 1px solid $gray-200;
+  margin-bottom: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p{
+
+    color: dimgray;
+  }
+}
+
 .card{
   display: grid;
   margin: 20px;
