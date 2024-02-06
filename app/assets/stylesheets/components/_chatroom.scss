@@ -133,13 +133,16 @@ body {
 .chatrooms-pic{
   height: 200px;
   width: 200px;
-  border-radius: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .pics{
   display: flex;
   justify-content: center;
   align-items: center;
   object-fit: cover;
+  height: 200px;
+  width: auto;
 }
 
 .chatroom-button{

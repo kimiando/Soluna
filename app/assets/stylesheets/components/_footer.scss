@@ -1,0 +1,33 @@
+.footer {
+  background: #FCF1E4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0px 50px;
+  color: #102C59;
+  margin-top: 30px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: #102C59;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .footer{
+    padding: 18px;
+  }
+  .footer-copyright{
+    font-size: 14px;
+  }
+  .footer-links a {
+    font-size: 20px;
+}
+}
