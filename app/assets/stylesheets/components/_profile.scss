@@ -4,7 +4,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     align-items: center;
-    margin: 50px;
+    margin: 20px;
     padding: 35px;
     background-color: floralwhite;
     align-content: center;
@@ -12,6 +12,14 @@
     border-radius: 25px;
 }
 
+.profile-header{
+  text-align: center;
+  background-color: #FCCA00;
+  border-radius: 10px;
+  padding: 10px;
+  color: #102C59;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 // card for chatrooms
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
