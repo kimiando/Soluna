@@ -6,6 +6,10 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Hello from Rails 7!');
+});
+
 var dropdownContainers = document.getElementsByClassName("dropdown-container");
 
 for (var i = 0; i < dropdownContainers.length; i++) {
