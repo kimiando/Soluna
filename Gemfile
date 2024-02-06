@@ -58,6 +58,7 @@ gem "dotenv-rails"
 gem "cloudinary"
 gem 'rspec-rails'
 gem 'redis'
+gem 'turbolinks_render'
 
 group :test do
   gem 'factory_bot_rails'
