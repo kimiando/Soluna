@@ -1,26 +1,96 @@
 // Form css for sign-up forms or any forms in the website
-.form-container{
+// .form-container{
+//   display: flex;
+//   justify-items: center;
+//   justify-content: center;
+// }
+
+// .form-border{
+//   border: 1px solid black;
+//   margin-top: 30px;
+//   padding: 30px;
+//   border-radius: 25px;
+// }
+
+// .forms-container{
+//   display: flex;
+//   justify-items: center;
+//   justify-content: center;
+// }
+
+// .forms{
+//   margin-top: 30px;
+//   padding: 50px;
+//   border: 1px solid white;
+//   border-radius: 10px
+// }
+//
+
+.form-container {
   display: flex;
-  justify-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.form-border{
-  border: 1px solid black;
+.form-border {
+  border: 2px solid #E8C872;
   margin-top: 30px;
   padding: 30px;
-  border-radius: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #182747;
 }
 
-.forms-container{
+.forms-container {
   display: flex;
-  justify-items: center;
   justify-content: center;
 }
 
-.forms{
+
+.forms {
   margin-top: 30px;
-  padding: 50px;
-  border: 1px solid white;
-  border-radius: 10px
+  padding: 20px;
+  border: 1px solid #E8C872;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background-color: #FCF1E4;
+  width: 500px;
+  color: #182747;
+  h2{
+    text-align: center;
+  }
+}
+
+.forms input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #E8C872;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+label{
+  margin-top: 3px;
+}
+
+.form-actions{
+  justify-content: center;
+  display: grid;
+  margin-bottom: 10px;
+}
+.button-form{
+  padding: 10px;
+  border: 1px solid #182747;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  color: #182747;
+  margin: -7px;
+}
+
+@media screen and (max-width: 700px) {
+  .forms{
+    margin: 30px;
+  }
 }
