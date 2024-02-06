@@ -30,18 +30,18 @@
   display: flex;
   margin-top: 60px;
   margin-bottom: -40px;
-  background-color: #102C59;
-  color:ivory;
+  background-color: #182747;
+  color: #FFDD93;
   width: -24px;
   border-radius: 6px;
   justify-content: center;
   padding: 5px;
   margin-left: 50px;
   margin-right: 50px;
-  border: 2px solid ivory;
+  border: 2px solid #FFDD93;
 }
 .house-rules{
-  display: grid;
+    display: grid;
     justify-content: center;
     flex-direction: row;
     width: auto;
@@ -54,9 +54,10 @@
       align-content: center;
       margin-top: 20px;
       line-height: 30px;
-      border: 1px solid #102C59;
+      border: 1px solid #182747;
+      background-color: #FCF1E4;
       h5{
-        color: #102C59;
+        color: #182747;
       }
       p{
         text-align: justify;
