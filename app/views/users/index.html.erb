@@ -11,11 +11,13 @@
           <%= image_tag 'profile-pic.webp',class: "user-pics", height: 200, width: 200, alt: 'Placeholder Image' %>
         <% end %>
       </div>
+      <h2 class="full-name"><%= user.first_name %> <%= user.last_name %></h2>
       <p class="user-name">@<%= user.user_name %></p>
       <p>
         <i class="fa-solid fa-circle" style="<%= user.online? ? 'color: #20b689;' : 'color: gray;' %>"></i>
         <%= user.status.present? ? user.status.capitalize : 'Offline' %>
       </p>
+      <p><%= user.email %></p>
       <p><%= user.bio %></p>
     </div>
   <% end %>
