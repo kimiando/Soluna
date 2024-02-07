@@ -1,7 +1,7 @@
 // cards for showing all the users-card
 .profile-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
     align-items: center;
     margin: 20px;
@@ -46,7 +46,9 @@
 
 .full-name{
   margin-top: 20px;
-  margin-bottom: -10px;
+  margin-bottom: -8px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .nickname {
@@ -170,7 +172,7 @@ button:hover, a:hover {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  background-color: antiquewhite;
+  background-color: #ffdd9275;
   height: 100%;
   margin: 10px;
   display: flex;
