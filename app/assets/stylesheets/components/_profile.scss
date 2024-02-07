@@ -65,18 +65,73 @@ button:hover, a:hover {
 }
 
 
+// .my-card{
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//   max-width: 300px;
+//   text-align: center;
+//   margin: auto;
+//   margin-top: 20px;
+//   padding: 20px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }
+
 .my-card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 50em;
   text-align: center;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 100px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  height: 28em;
+  background-color: antiquewhite;
 }
+
+.my-user-card{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 105px;
+  justify-content: space-around;
+}
+
+.user-details{
+  margin-top: 140px;
+  margin-left: -3px;
+}
+
+
+@media screen and (max-width: 840px) {
+  .my-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 40em;
+    margin: 20px;
+    background-color: antiquewhite;
+  }
+  .my-user-card{
+    display: grid;
+    justify-content: space-around;
+    margin-left: 0;
+    margin-top: 80px;
+  }
+  .user-details{
+    h1{
+      margin-bottom: none;
+    }
+  }
+}
+
 
 .bio {
   color: grey;
