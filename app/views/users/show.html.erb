@@ -1,20 +1,24 @@
 <div class="my-card">
-  <div class="user-pics">
-    <% if @user.photo.attached? %>
-      <%= cl_image_tag @user.photo.key,class:"user-pics"%>
-    <% else %>
-      <%= image_tag 'profile-pic.webp', height: 200, width: 200, alt: 'Placeholder Image' %>
-    <% end %>
-  </div>
-  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-  <p>
-    @<%= @user.user_name %>
-  </p>
-  <p>  <i class="fa-solid fa-circle" style="<%= @user.online? ? 'color: #20b689;' : 'color: gray;' %>"></i>
-    <%= @user.status.capitalize %>
-  </p>
-  <p class="bio"><%= @user.bio %></p>
-  <div class="users-button">
-    <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
+  <div class="my-user-card">
+    <div class="user-pics">
+      <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key,class:"user-pics"%>
+      <% else %>
+        <%= image_tag 'profile-pic.webp', height: 200, width: 200, alt: 'Placeholder Image' %>
+      <% end %>
+      <div class="users-button">
+        <p>
+          @<%= @user.user_name %>
+        </p>
+        <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
+      </div>
+    </div>
+    <div class="user-details">
+      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+      <p>  <i class="fa-solid fa-circle" style="<%= @user.online? ? 'color: #20b689;' : 'color: gray;' %>"></i>
+        <%= @user.status.capitalize %>
+      </p>
+      <p class="bio"><%= @user.bio %></p>
+    </div>
   </div>
 </div>
