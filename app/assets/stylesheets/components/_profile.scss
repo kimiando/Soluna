@@ -91,6 +91,7 @@ button:hover, a:hover {
   justify-content: center;
   height: 28em;
   background-color: antiquewhite;
+  border-radius: 15px;
 }
 
 .my-user-card{
@@ -99,6 +100,10 @@ button:hover, a:hover {
   align-content: center;
   margin-bottom: 105px;
   justify-content: space-around;
+  h1{
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+  }
 }
 
 .user-details{
@@ -109,21 +114,37 @@ button:hover, a:hover {
 
 @media screen and (max-width: 840px) {
   .my-card{
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: nowrap;
+    // align-content: center;
+    // justify-content: center;
+    // align-items: center;
+    // height: 40em;
+    // margin: 20px;
+    // background-color: antiquewhite;
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: center;
-    height: 40em;
+    height: 37em;
     margin: 20px;
     background-color: antiquewhite;
+    margin-top: 50px;
   }
   .my-user-card{
     display: grid;
     justify-content: space-around;
     margin-left: 0;
     margin-top: 80px;
+    h1{
+      font-size: 40px;
+      margin-top: -15px;
+      font-family: 'Merriweather', serif;
+    }
   }
   .user-details{
     h1{
@@ -143,7 +164,7 @@ button:hover, a:hover {
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: white;
+  color: #182747;
   text-align: center;
   cursor: pointer;
   width: 100%;
