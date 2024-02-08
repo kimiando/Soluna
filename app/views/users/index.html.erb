@@ -8,7 +8,7 @@
         <% if user.photo.attached? %>
           <%= cl_image_tag user.photo.key, class: "user-pics" %>
         <% else %>
-          <%= image_tag 'profile-pic.webp',class: "user-pics", height: 200, width: 200, alt: 'Placeholder Image' %>
+          <%= image_tag 'profile-pic.webp', class: "user-pics", height: 200, width: 200, alt: 'Placeholder Image' %>
         <% end %>
       </div>
       <h2 class="full-name"><%= user.first_name %> <%= user.last_name %></h2>
@@ -18,7 +18,26 @@
         <%= user.status.present? ? user.status.capitalize : 'Offline' %>
       </p>
       <p><%= user.bio %></p>
+      <div class="friends-list">
+        <% if user.friends.any? %>
+          <p>Friends:</p>
+          <ul>
+            <% user.friends.each do |friend| %>
+              <li><%= friend.user_name %></li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p>No friends yet.</p>
+        <% end %>
+      </div>
+      <% if current_user.friend_with?(user) %>
+        <p>You are friends with <%= user.user_name %>.</p>
+      <% elsif current_user.pending_invitations.exists?(friend: user) %>
+        <p>Your friend request is pending.</p>
+      <% else %>
+        <%= button_to "Add Friend", send_invitation_user_path(user), method: :post, class: "add-friend-button", params: { authenticity_token: form_authenticity_token } %>
+      <% end %>
     </div>
   <% end %>
 </div>
-<%= render "shared/footer"%>
+<%= render "shared/footer" %>

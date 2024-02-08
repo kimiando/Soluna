@@ -2,14 +2,12 @@
   <div class="my-user-card">
     <div class="user-pics">
       <% if @user.photo.attached? %>
-        <%= cl_image_tag @user.photo.key,class:"user-pics"%>
+        <%= cl_image_tag @user.photo.key, class: "user-pics" %>
       <% else %>
         <%= image_tag 'profile-pic.webp', height: 200, width: 200, alt: 'Placeholder Image' %>
       <% end %>
       <div class="users-button">
-        <p>
-          @<%= @user.user_name %>
-        </p>
+        <p>@<%= @user.user_name %></p>
         <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
       </div>
     </div>
@@ -22,4 +20,18 @@
       <p class="bio"><%= @user.bio %></p>
     </div>
   </div>
+</div>
+<div class="friends-list">
+  <% if current_user.friend_with?(@user) %>
+    <p>You are friends with <%= @user.user_name %>.</p>
+  <% elsif current_user.pending_invitations.exists?(friend: @user) %>
+    <p>Your friend request is pending.</p>
+    <!-- Optionally, you can provide a button or link to cancel the friend request. -->
+    <%= link_to 'Cancel Friend Request', cancel_friend_request_user_path(@user), method: :delete, class: 'friend-action-button' %>
+  <% else %>
+    <%= form_tag(send_invitation_user_path(@user), method: :post, class: 'friend-action-form') do %>
+      <%= submit_tag 'Add Friend', class: 'friend-action-button' %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <% end %>
+  <% end %>
 </div>
