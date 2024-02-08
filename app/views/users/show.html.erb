@@ -10,7 +10,7 @@
         <p>
           @<%= @user.user_name %>
         </p>
-        <%= link_to 'Edit Profile', edit_user_path(current_user), class: "chatrooms-add-btn" %>
+        <%= link_to 'Edit Profile', edit_user_path(@user), class: "chatrooms-add-btn" if current_user == @user %>
       </div>
     </div>
     <div class="user-details">

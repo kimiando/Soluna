@@ -17,6 +17,11 @@
         <i class="fa-solid fa-circle" style="<%= user.online? ? 'color: #20b689;' : 'color: gray;' %>"></i>
         <%= user.status.present? ? user.status.capitalize : 'Offline' %>
       </p>
+      <p>
+        <button>
+          <%= link_to "view my profile", user_path(user) %>
+        </button>
+      </p>
       <p><%= user.bio %></p>
     </div>
   <% end %>
