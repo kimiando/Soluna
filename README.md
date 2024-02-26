@@ -9,10 +9,6 @@ A messaging app inspired by the Spanish words "sol" (day) and "luna" (night). Jo
 <img width="1800" alt="soluna-community" src="https://github.com/kimiando/Soluna/assets/117824705/fd29930b-11d5-425e-9ec0-90ae0b312bd7">
 
 
-
-Website: https://soluna-509dd188eb97.herokuapp.com/
-
-
 ## Built With
 - [Rails 7](https://guides.rubyonrails.org/) - Backend / Front-end
 - [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
